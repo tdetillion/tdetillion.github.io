@@ -56,10 +56,12 @@ nav a:hover {
 /* Dropdown */
 .dropdown {
     position: relative;
+    display: inline-block;
 }
 
-.dropdown > a {
-    padding-bottom: 1rem;
+.dropbtn {
+    display: inline-block;
+    padding: 0.5rem 0;
 }
 
 .dropdown-content {
@@ -68,10 +70,9 @@ nav a:hover {
     background-color: #34495e;
     min-width: 250px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    top: 100%;
+    z-index: 1000;
+    top: calc(100% + 0.5rem);
     left: 0;
-    margin-top: -0.5rem;
     border-radius: 4px;
 }
 
@@ -101,9 +102,20 @@ nav a:hover {
     font-style: italic;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
     display: block;
 }
+
+.dropdown::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 0.5rem;
+}
+
 
 /* Main Content */
 main {
