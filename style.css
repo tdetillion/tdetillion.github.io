@@ -149,6 +149,47 @@ section {
     margin-bottom: 3rem;
 }
 
+/* Article Content */
+.article-content h1 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.article-content h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.article-content h2 i {
+    color: #3498db;
+    font-size: 1.2rem;
+    width: 1.5rem;
+    text-align: center;
+}
+
+.article-content p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.article-content ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.article-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
 h3 {
     font-size: 1.6rem;
     margin-bottom: 1rem;
