@@ -238,6 +238,78 @@ section {
     margin-right: 0.3rem;
 }
 
+/* Warning Callout */
+.warning-callout {
+    background-color: #fef9e7;
+    border-left: 4px solid #f1c40f;
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin: 1rem 0;
+}
+
+.warning-callout p {
+    margin-bottom: 0;
+}
+
+.warning-callout i.fa-triangle-exclamation {
+    color: #f39c12;
+    margin-right: 0.3rem;
+}
+
+/* Guide Link Cards */
+.guide-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.guide-link {
+    display: block;
+    padding: 1.25rem;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.guide-link:hover {
+    border-color: #3498db;
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.15);
+}
+
+.guide-link i {
+    color: #3498db;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.guide-link-title {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.4rem;
+}
+
+.guide-link-desc {
+    display: block;
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.guide-link-arrow {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #3498db;
+}
+
 h3 {
     font-size: 1.6rem;
     margin-bottom: 1rem;
