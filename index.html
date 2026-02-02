@@ -205,17 +205,20 @@
        Experience Section
        ======================================== */
     .experience-item {
-      padding: var(--spacing-md) 0;
-      border-bottom: 1px solid var(--color-border);
+      padding: var(--spacing-md);
+      margin: 0 calc(-1 * var(--spacing-md));
+      border-radius: var(--border-radius);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
     }
 
-    .experience-item:first-of-type {
-      padding-top: 0;
+    .experience-item:hover {
+      transform: scale(1.02);
+      background-color: var(--color-bg-alt);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     }
 
-    .experience-item:last-of-type {
-      border-bottom: none;
-      padding-bottom: 0;
+    .experience-item + .experience-item {
+      border-top: 1px solid var(--color-border);
     }
 
     .experience-item__header {
@@ -261,16 +264,19 @@
     }
 
     .card {
+      display: block;
       background: var(--color-bg-alt);
       border: 1px solid var(--color-border);
       border-radius: var(--border-radius);
       padding: var(--spacing-md);
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      text-decoration: none;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
     }
 
     .card:hover {
+      transform: translateY(-4px);
       border-color: var(--color-border-hover);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
     }
 
     .card__org {
@@ -291,35 +297,6 @@
       font-size: 0.9375rem;
       color: var(--color-text-muted);
       margin-bottom: 0;
-    }
-
-    /* ========================================
-       Currently Section
-       ======================================== */
-    .currently-list {
-      list-style: none;
-    }
-
-    .currently-list li {
-      position: relative;
-      padding-left: var(--spacing-md);
-      margin-bottom: var(--spacing-sm);
-      color: var(--color-text-muted);
-    }
-
-    .currently-list li:last-child {
-      margin-bottom: 0;
-    }
-
-    .currently-list li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0.625rem;
-      width: 6px;
-      height: 6px;
-      background-color: var(--color-accent);
-      border-radius: 50%;
     }
 
     /* ========================================
@@ -435,6 +412,22 @@
       text-decoration: none;
       white-space: nowrap;
       transition: color 0.2s ease;
+      position: relative;
+    }
+
+    .nav__link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--color-accent);
+      transition: width 0.2s ease;
+    }
+
+    .nav__link:hover::after {
+      width: 100%;
     }
 
     .nav__link:hover,
@@ -444,6 +437,10 @@
 
     .nav__link--active {
       color: var(--color-accent);
+    }
+
+    .nav__link--active::after {
+      width: 100%;
     }
 
     /* ========================================
@@ -535,7 +532,6 @@
         <li><a href="#about" class="nav__link">About</a></li>
         <li><a href="#experience" class="nav__link">Experience</a></li>
         <li><a href="#leadership" class="nav__link">Leadership</a></li>
-        <li><a href="#currently" class="nav__link">Currently</a></li>
         <li><a href="projects.html" class="nav__link">Projects</a></li>
       </ul>
     </nav>
@@ -557,9 +553,8 @@
          ======================================== -->
     <section id="about" class="about animate animate-delay-3">
       <p class="section-label">About</p>
-      <p>I'm a go-to-market professional who thrives at the intersection of strategy, relationships, and enablement. My career started in management consulting at Accenture, where I learned to analyze complex business problems, guide executives through strategic decisions, and translate ambiguity into action. I then brought that consulting mindset to a Series A startup, where I've been bridging the gap between product, sales, and customers.</p>
-      <p>The thread through my work: I'm energized by teaching stakeholders, building trusted partnerships, and making the complex feel simple. Whether I'm advising on deal strategy, enabling a sales team, or helping a customer see how a solution fits their workflow—that's where I do my best work.</p>
-      <p>I'm currently exploring Solutions Consultant and Strategic Customer Success roles at B2B SaaS companies in Chicago.</p>
+      <p>I'm a go-to-market professional who thrives at the intersection of strategy, relationships, and enablement. My career has taken me from management consulting to startup operations—and through it all, I've discovered my best work happens when I'm teaching stakeholders, building trusted partnerships, and translating complex challenges into clear solutions.</p>
+      <p>Outside of work, I'm building community in Chicago through nonprofit board service and the local tech scene. You'll usually find me running the lakefront, training for my next race, or exploring a new neighborhood restaurant.</p>
     </section>
 
     <!-- ========================================
@@ -594,38 +589,24 @@
       <p class="section-label">Leadership & Community</p>
 
       <div class="card-grid">
-        <div class="card">
+        <a href="https://youngleadersfund.org" class="card" target="_blank" rel="noopener noreferrer">
           <p class="card__org">Young Leaders Fund</p>
           <p class="card__role">Grants Lead</p>
           <p class="card__description">Managing the annual grant program and coordinating 40+ members to support Chicago-area nonprofits.</p>
-        </div>
+        </a>
 
-        <div class="card">
+        <a href="https://www.yourprismatic.org" class="card" target="_blank" rel="noopener noreferrer">
           <p class="card__org">Prismatic</p>
           <p class="card__role">Associate Board Member</p>
           <p class="card__description">Driving event programming, mentorship initiatives, and engagement for emerging nonprofit leaders.</p>
-        </div>
+        </a>
 
-        <div class="card">
+        <a href="https://chicagoinnovation.com" class="card" target="_blank" rel="noopener noreferrer">
           <p class="card__org">Chicago Innovation</p>
           <p class="card__role">Innovator</p>
           <p class="card__description">Developing and presenting solutions for partner organizations as part of the innovation community.</p>
-        </div>
+        </a>
       </div>
-    </section>
-
-    <!-- ========================================
-         Currently
-         ======================================== -->
-    <section id="currently" class="currently animate animate-delay-5">
-      <p class="section-label">What I'm Working On</p>
-
-      <ul class="currently-list">
-        <li>Exploring Solutions Consultant roles at B2B SaaS companies in Chicago</li>
-        <li>Building content around personal finance and financial independence</li>
-        <li>Training for summer races—half-marathons and triathlons</li>
-        <li>Deepening roots in Chicago's tech and nonprofit communities</li>
-      </ul>
     </section>
 
     <!-- ========================================
