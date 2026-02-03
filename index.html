@@ -531,6 +531,49 @@
     }
 
     /* ========================================
+       Earlier Chapters Section
+       ======================================== */
+    .earlier-chapters {
+      margin-bottom: var(--spacing-xl);
+    }
+
+    .earlier-list {
+      list-style: none;
+    }
+
+    .earlier-list li {
+      padding: var(--spacing-sm) 0;
+      border-bottom: 1px solid var(--color-border);
+      font-size: 0.9375rem;
+      color: var(--color-text-muted);
+    }
+
+    .earlier-list li:first-child {
+      padding-top: 0;
+    }
+
+    .earlier-list li:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .earlier-list__org {
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    .earlier-list__role {
+      color: var(--color-text-light);
+    }
+
+    .earlier-list__desc {
+      display: block;
+      margin-top: 0.25rem;
+      font-size: 0.875rem;
+      color: var(--color-text-light);
+    }
+
+    /* ========================================
        Footer
        ======================================== */
     .footer {
@@ -781,6 +824,29 @@
           </div>
         </a>
       </div>
+    </section>
+
+    <!-- ========================================
+         Earlier Chapters
+         ======================================== -->
+    <section class="earlier-chapters animate animate-delay-6">
+      <h2 class="section-title">Earlier Chapters</h2>
+      <p class="section-intro">A few experiences that shaped how I got here.</p>
+
+      <ul class="earlier-list">
+        <li>
+          <span class="earlier-list__org">M Powered Strategies</span> <span class="earlier-list__role">| Digital Transformation Intern</span>
+          <span class="earlier-list__desc">Analyzed client contracts and presented strategic recommendations to company leadership</span>
+        </li>
+        <li>
+          <span class="earlier-list__org">Gigs4Good</span> <span class="earlier-list__role">| Founder & Executive Director</span>
+          <span class="earlier-list__desc">Founded a nonprofit connecting volunteers with fundraising opportunities through service</span>
+        </li>
+        <li>
+          <span class="earlier-list__org">Central Lawn Care</span> <span class="earlier-list__role">| Owner</span>
+          <span class="earlier-list__desc">Launched and ran a lawn care business, managing 30+ clients and all operations</span>
+        </li>
+      </ul>
     </section>
 
     <!-- ========================================
